@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico1",
+      "top": 60,
+      "left": 118.7,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 69.25,
+      "left": 22.95,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 164.05,
+      "left": 9,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "led1:C", "r1:1", "gray", [ "v0" ] ],
+    [ "pico1:GND.4", "r1:2", "black", [ "h0" ] ],
+    [ "pico1:GP13", "led1:A", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
